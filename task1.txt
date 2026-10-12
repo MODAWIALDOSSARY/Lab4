@@ -1,0 +1,51 @@
+% Task 1 - Unification queries and results
+
+% 1
+% Query: house = house.
+% Result: true.
+% Explanation: Both atoms are identical.
+
+% 2
+% Query: house = abc.
+% Result: false.
+% Explanation: The atoms are different.
+
+% 3
+% Query: edge(a,b) = edge(C,b).
+% Result: C = a.
+% Explanation: C unifies with a.
+
+% 4
+% Query: edge(a,d) = edge(C,B).
+% Result: C = a, B = d.
+% Explanation: Both variables unify with their corresponding atoms.
+
+% 5
+% Query: edge(C,B) = edge(a,d).
+% Result: C = a, B = d.
+% Explanation: The variables unify with the corresponding atoms.
+
+% 6
+% Query: edge(A,f(g,h)) = edge(a,B).
+% Result: A = a, B = f(g,h).
+% Explanation: Both arguments can be unified.
+
+% 7
+% Query: edge(A,A) = edge(b,c).
+% Result: false.
+% Explanation: A cannot be both b and c.
+
+% 8
+% Query: edge(A,A) = edge(b,b).
+% Result: A = b.
+% Explanation: Both arguments have the same atom.
+
+% 9
+% Query: A = B, B = f.
+% Result: A = f, B = f.
+% Explanation: Both variables become f.
+
+% 10
+% Query: A = B, B = f, A = e.
+% Result: false.
+% Explanation: A is unified with f and cannot also unify with e.
